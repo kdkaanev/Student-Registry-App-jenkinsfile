@@ -19,6 +19,14 @@ pipeline {
                 sh ' npm test'
             }
         
-    }
+        }
+        stage('Deploy'){
+            steps {
+                script {
+                    input message: 'Aprove Deployment', ok: 'Deploy'
+                    echo 'Deployng'
+                }
+            }
+        }
 }
 }
