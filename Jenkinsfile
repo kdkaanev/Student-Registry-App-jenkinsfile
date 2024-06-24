@@ -14,5 +14,11 @@ pipeline {
                 sh 'npm audit'
             }
         }
+        stage('Run integration test'){
+            steps{
+                sh 'test'
+            }
+        
     }
+}
 }
